@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+   <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+{{!-- {{title}} 
+{{author}}
+{{urlToImage}} --}}
+
+ 
+  <div class="pgcontain">
+    <!-- ///upper  -->
+      <div style="background-color: #69c4f8d0; height: 30px;width: 100%;">
+          <div>
+              <div class="row">
+                  <div class="col-12">
+                      <h6 class="animate__animated animate__bounceIn"  style="font-size: 18px; text-align: center;">
+                        <i class="far fa-sun" style="font-size: 16px;"> 
+                        </i>   يمكنك الاشتراك عن طريق البريد الالكتروني,  تابعوا  موقعنا  الآخباري  لحظه  بلحظه</h6>
+                  </div>
+          </div>
+      </div>
+
+      <!-- //header -->
+
+<header class="container-fluid "  style="background-color: #FFEFF0; height: 180px;">
+  <div class="row">
+              <div class="col-4 justify-content-center ">
+                  <h2  style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                   color: rgb(31, 83, 180);font-size: 90px;
+                   box-shadow:  2px   rgb(22, 22, 22)"><span class="news"> N E W S</span></h2>
+
+          </div>
+      
+
+          <div class="col-8">
+              <div class="input-group rounded " style="width: 500px;">
+                  <input  type="search" class="form-control rounded" placeholder="Search">
+                  <span class="input-group-text border-0" id="search-addon">
+                    <i class="fas fa-search"></i>
+                    <button style="border: none">search</button>
+                  </span>
+                </div>
+          </div>
+
+    </div>
+
+</header>
+
+<!-- nav -->
+
+<ul class="nav justify-content-center" style="background-color: #FFEFF0">
+  <li class="nav-item" >
+    <a  class="nav-link active" aria-current="page" href="#">Home</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Articles</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">About us</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link ">Contact</a>
+  </li>
+</ul>
+
+
+<!-- ////////cards -->
+<div class="row row-cols-4">
+{{#each value}}
+
+<div class="card mb-3 mt-5" style="max-width: 1040px;">
+      <img src="{{this.urlToImage}}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{this.title}}</h5>
+        <p class="card-text">{{this.description}}</p>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+</div>
+
+</div>
+  <script src="../../src/tools/newspro.js"></script>
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/bootstrap.bundle.js"></script>
+  
+</body>
+</html>
